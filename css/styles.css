@@ -1690,6 +1690,7 @@ nav .nav-group.right {
   z-index: -1;
 }
 .page.recipe .attribution-recipe .title-recipe {
+  color: black;
   font-size: 22px;
   line-height: 26px;
   font-family: 'lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2203,4 +2204,9 @@ nav .nav-group.right {
 }
 #admin .btn-primary {
   width: 100%;
+}
+
+.myImg{
+  height: 30%!important;
+  width: 30%!important;
 }
