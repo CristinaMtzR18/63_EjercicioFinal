@@ -957,6 +957,7 @@ nav .nav-group.right {
 }
 [class^="bg-image"],
 [class*=" bg-image"] {
+  background-image: url('../img/activity/activity-placeholder-strawberry-640x640.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

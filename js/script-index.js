@@ -94,6 +94,26 @@ function renderActivities(activitiesArray) {
 */
 function renderActivity(activity) {
 	console.log('Voy a pintar la actividad: ', activity);
+
+	var template =
+	'<a href="#" class="item-activity">' + 
+		'<span class="attribution">' +
+			'<span class="avatar">' +
+      			'<img src="<%= activity.userAvatar %>" class="image-avatar">'+
+    		'</span>'+
+    		'<span class="meta">'+
+		      '<span class="author"><%= activity.userName %></span> made'+ 
+		      '<span class="recipe"><%= activity.recipeName %></span> <%= activity.text %>)'+ 
+		      '<span class="location">&mdash; <%= activity.place %></span>'+
+		    '</span>' +
+		'</span>' +
+		'<div class="bg-image"></div>'+
+	'</a>';
+
+	var compiled = _.template(template);
+    var a = compiled ({activity:activity});
+    console.log(a);
+
+    var elemento = $(a);
+    $('.list-activities').append(elemento);
 }
-
-
