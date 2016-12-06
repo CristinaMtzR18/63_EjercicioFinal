@@ -56,8 +56,7 @@ function renderRecipe(recipe) {
 	var sIco = $('<span class="icon-bookmark"></span>');
 	//Imagen
 	var img = $('<img/>');
-	//img.addClass('myImg');
-	img.attr('src', recipe.source.url);
+	img.attr('src', 'img/recipes/320x350/'+recipe.name+'.jpg');
 
 	//unir
 	aItem.append(sAttr);
@@ -107,7 +106,7 @@ function renderActivity(activity) {
 		      '<span class="location">&mdash; <%= activity.place %></span>'+
 		    '</span>' +
 		'</span>' +
-		'<div class="bg-image"></div>'+
+		'<div class="bg-image" style="background-image: url(&quot;<%= activity.image %>&quot;)"></div>'+
 	'</a>';
 
 	var compiled = _.template(template);
