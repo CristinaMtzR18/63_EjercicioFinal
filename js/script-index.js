@@ -7,7 +7,7 @@ $(document).ready( function(){
 	//Pinta titulo
 	printNews();
 	//Comenzamos a usar la data
-	renderHighlightedRecipes(recipesArray);
+	//renderHighlightedRecipes(recipesArray);
 });
 //Funcion para pintar noticias
 function printNews(){
@@ -21,9 +21,8 @@ function printNews(){
 function renderHighlightedRecipes(recipesArray) {
 	for(var i= 0;i<recipesArray.length;i++){
 		if(recipesArray[i].highlighted==true){
-			console.log('Recipes: ', recipesArray[i]);
-			var recipe = recipesArray[i];
-			renderRecipe(recipe);
+			console.log('Recipes: ', i);
+			renderRecipe(recipesArray[i]);
 		}
 	}
 }
@@ -35,7 +34,7 @@ function renderHighlightedRecipes(recipesArray) {
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
-	console.log('Voy a pintar la receta: ', recipe);
+	//console.log('Voy a pintar la receta: ');
 
 	//Creando elementos HTML con JS
 	//Contenedor principal
@@ -45,7 +44,7 @@ function renderRecipe(recipe) {
 	//Titulo
 	var sTitle = $('<span class="title-recipe"></span)');
 	sTitle.text(recipe.title);
-	console.log(recipe.title);
+	//console.log(recipe.title);
 	//Contenedor del autor
 	var sMeta = $('<span class="metadata-recipe"></span>)');
 	var sAuthor = $('<span class="author-recipe"></span>)');
