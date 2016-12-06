@@ -2,6 +2,8 @@ $(document).ready( function(){
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
+	//La varuable "activitiesArray" esta declarada en el archivo "data/recipes.js"
+	renderActivities(activitiesArray);
 	//oculta icono
 	$(".icon-arrow-left-alt").hide();
 	//Pinta titulo
@@ -9,7 +11,7 @@ $(document).ready( function(){
 	//Comenzamos a usar la data
 	//renderHighlightedRecipes(recipesArray);
 });
-//Funcion para pintar noticias
+//Funcion para pintar un titulo
 function printNews(){
 	$('#newsRecipes').text('NUEVAS RECETAS')
 }
@@ -34,7 +36,7 @@ function renderHighlightedRecipes(recipesArray) {
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
-	//console.log('Voy a pintar la receta: ');
+	console.log('Voy a pintar la receta: ', recipe);
 
 	//Creando elementos HTML con JS
 	//Contenedor principal
@@ -70,13 +72,19 @@ function renderRecipe(recipe) {
 
 }
 
-
-
 /*
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+	for(var i= 0;i<activitiesArray.length;i++){
+		console.log('Activities: ', activitiesArray[i]);
+		renderActivity(activitiesArray[i]);
+	}
+	//Validación
+	if(activitiesArray.length>0){
+			console.log("Esconde DIV con clase wrapper-message");
+			$(".wrapper-message").hide();
+	}
 }
 
 /*
@@ -84,8 +92,8 @@ function renderActivities(activitiesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
-	
+function renderActivity(activity) {
+	console.log('Voy a pintar la actividad: ', activity);
 }
 
 
